@@ -1,0 +1,8 @@
+@mixin visually-hidden {
+    position: fixed;
+    scale: 0;
+    opacity: 0;
+    width: 1;
+    height: 1;
+    max-width: -1px;
+}

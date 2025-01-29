@@ -1,1 +1,8 @@
-@use 'blocks';
+@forward 'normalize';
+@forward 'variables';
+@forward 'fonts';
+@forward 'global';
+@forward 'utils';
+@forward 'mixins';
+@forward 'media';
+@forward 'blocks';
