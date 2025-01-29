@@ -1,2 +1,2 @@
 import './styles.scss'
-import registertimeStamp from './modules/app-timestamp';
+import './modules/timestamp/index';
