@@ -16,14 +16,30 @@
         --headerHeight: 350px;
     }
 
-    
     @include desktop{
         --circleRadius: 1.44vw;
         --headerHeight: 466px;
     }
 
     &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 25px;
+
         padding-block: 24px 30px;
+        color: var(--colorLight);
+    }
+
+    &__title-container {
+    }
+
+    &__title {
+        text-align: center;
+        em{
+            color: var(--colorAccent);
+            font-style: normal;
+        }
     }
 
     &::before{
