@@ -6,9 +6,37 @@
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0" />
   <title>YouMeal</title>
-{{> favicon}}
+  <link rel="preload"
+    as="font"
+    type="font/woff2"
+    href="/assets/fonts/Nunito-Regular.woff2"
+    crossorigin="anonymous">
+  <link rel="preload"
+    as="font"
+    href="/assets/fonts/Nunito-SemiBold.woff2"
+    crossorigin="anonymous">
+  <link rel="preload"
+    as="font"
+    href="/assets/fonts/Nunito-ExtraBold.woff2"
+    crossorigin="anonymous">
+  {{> favicon}}
 </head>
+
 <body>
+  <header class="header">
+    <div class="container header__container">
+      <svg width="153"
+        height="35">
+        <use href="/assets/svg/sprites.svg#icon-logo"></use>
+      </svg>
+  
+      <div class="header__title-container">
+        <h1 class="header__title">Только самые<br><em>сочные бургеры!</em>
+        </h1>
+        <p class="header__appeal">Бесплатная доставка от 599₽</p>
+      </div>
+    </div>
+  </header>
   <script type="module"
     src="/src/main.js"></script>
 </body>
