@@ -1,69 +1,147 @@
-@use '../variables' as *; 
-@use '../media' as *; 
-@use '../mixins' as *; 
+@use '../variables' as *;
+@use '../media' as *;
+@use '../mixins' as *;
 @use 'sass:color' as *;
 
 .header {
     --circleRadius: 0.95vw;
     --circleRadiusPerc: calc(var(--circleRadius) * 100);
-    --headerHeight: 100svh;
-    --bannerAspect: 1.09;
+    --bannerAspect: 0.87;
     --bannerWidth: 176px;
     position: relative;
-    height: var(--headerHeight);
-    
-    @include xs{
+
+    @include xs {
         --circleRadius: 3vw;
     }
 
-    @include tablet{
+    @include tablet {
         --circleRadius: 1.65vw;
-        --headerHeight: 350px;
     }
 
-    @include desktop{
+    @include desktop {
         --circleRadius: 1.44vw;
-        --headerHeight: 466px;
+        --bannerWidth: 253px;
     }
 
     &__container {
         display: flex;
         flex-direction: column;
+        flex-wrap: nowrap;
         align-items: center;
-        row-gap: 25px;
-
-        padding-block: 20px 0px;
+        row-gap: 24px;
+        
+        padding-block: 24px 30px;
         color: var(--colorLight);
+        
+        @include tablet {
+            padding-block: 24px 44px;
+            row-gap: 23px;
+        }
+
+        @include desktop {
+            padding-block: 22px 63px;
+            row-gap: 24px;
+        }
+
+        @include desktop-l {
+            padding-block: 22px 72px;
+            row-gap: 24px;
+        }
     }
 
+    &__logo {
+        text-align: center;
+    }
+
+    &__info {
+        --infoPaddingTop: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 24px;
+        width: 100%;
+        // max-width: 784px;
+
+        @include tablet {
+            padding: 18px 10px 10px 24px;
+            flex-direction: row;
+            justify-content: center;
+            align-items: start;
+            column-gap: 35px;
+
+        }
+
+        @include desktop {
+            column-gap: 38px;
+            padding: 25px 10px 10px 35px;
+        }
+        
+        @include desktop-l {
+            column-gap: 57px;
+            padding: 26px 10px 10px 35px;
+        }
+    }
+
+    &__banner {
+        &-image {
+            width: var(--bannerWidth);
+            aspect-ratio: var(--bannerAspect);
+        }
+
+        @include tablet {
+            order: -1;
+        }
+    }
+    
     &__title-container {
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         row-gap: 16px;
-
-        padding-block: 0 248px;
-
-        background: bottom / var(--bannerWidth) auto no-repeat url(/assets/svg/banner.svg);
-}
+        
+        @include tablet {
+            align-items: start;            
+        }
+        
+        @include desktop {
+            row-gap: 52px;
+        }
+    }
 
     &__title {
-        @include text-clamp(30, 50);
-        line-height: 1.24;
-
+        font-size: 30px;
+        line-height: 1.2;
+        
         text-align: center;
-        em{
+        
+        @include tablet {
+            padding-top: 8px;
+            text-align: left;
+            font-size: 36px;
+        }
+
+        @include desktop {
+            padding-top: 20px;
+            font-size: 50px;
+        }
+        
+        em {
             color: var(--colorAccent);
             font-style: normal;
         }
     }
+    
+    &__appeal {
+        font-size: 12px;
 
-    &__appeal{
-        @include text-clamp(12, 16);
+        @include tablet {
+            font-size: 16px;
+        }
     }
 
-    &::before{
+    &::before {
         content: "";
         position: absolute;
         left: 0;
@@ -71,15 +149,15 @@
         width: 100%;
         height: 50%;
         z-index: -2;
-        
+
         background-color: var(--colorPrimary);
 
         @include tablet {
             display: none;
         }
     }
-    
-    &::after{
+
+    &::after {
         content: "";
         position: absolute;
         left: 0;
