@@ -73,9 +73,4 @@ iframe {
     max-width: calc(var(--containerWidth) + 2 * var(--containerPaddingInline));
     padding-inline: var(--containerPaddingInline);
     margin: 0 auto;
-
-    @include tablet{
-        --containerPaddingInline: 64px;
-        --containerWidth: calc(100vw - 2 * var(--containerWidth));
-    }
 }
