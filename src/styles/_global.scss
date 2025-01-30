@@ -41,7 +41,7 @@ a {
     line-height: 0;
 }
 
-ul:where([class]) {
+:is(menu,ul):where([class]) {
     list-style: none;
     padding: 0;
     margin: 0;

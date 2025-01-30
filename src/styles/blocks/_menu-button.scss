@@ -1,0 +1,76 @@
+@use '../media' as *;
+
+.menu-button {
+    --menuButtonHeight: 30px;
+    --buttonMenuPaddingInline: 40px 8px;
+    --buttonMenuFontSize: 1.2rem;
+    --buttonMenuBgColor: var(--colorLight);
+
+    min-height: var(--menuButtonHeight);
+    padding-inline: var(--buttonMenuPaddingInline);
+    font-size: var(--buttonMenuFontSize);
+    background-color: var(--buttonMenuBgColor);
+    border-radius: 50px;
+
+    &:hover {
+        box-shadow: inset 0 0 0 1px var(--colorButtonAccent);
+    }
+
+
+    @include desktop {
+        --menuButtonWidth: 126px;
+        --menuButtonHeight: 40px;
+        --buttonMenuPaddingLeft: 46px 14px;
+        --buttonMenuFontSize: 1.6rem;
+    }
+
+    &--active {
+        --buttonMenuBgColor: var(--colorPrimary);
+    }
+
+    &--burger {
+        background: left 8px center / 24px auto no-repeat url(/assets/img/icons/burger.webp),
+            var(--buttonMenuBgColor);
+    }
+
+    &--snack {
+        background: left 8px center / 24px auto no-repeat url(/assets/img/icons/snack.webp),
+            var(--buttonMenuBgColor);
+    }
+
+    &--hotdog {
+        background: left 8px center / 24px auto no-repeat url(/assets/img/icons/hotdog.webp),
+            var(--buttonMenuBgColor);
+    }
+
+    &--combo {
+        background: left 8px center / 24px auto no-repeat url(/assets/img/icons/combo.webp),
+            var(--buttonMenuBgColor);
+    }
+
+    &--shawerma {
+        background: left 8px center / 24px auto no-repeat url(/assets/img/icons/shawerma.webp),
+            var(--buttonMenuBgColor);
+    }
+
+    &--pizza {
+        background: left 8px center / 24px auto no-repeat url(/assets/img/icons/pizza.webp),
+            var(--buttonMenuBgColor);
+    }
+
+    &--wok {
+        background: left 8px center / 24px auto no-repeat url(/assets/img/icons/wok.webp),
+            var(--buttonMenuBgColor);
+    }
+
+    &--desert {
+        background: left 8px center / 24px auto no-repeat url(/assets/img/icons/desert.webp),
+            var(--buttonMenuBgColor);
+    }
+
+    &--souce {
+        background: left 8px center / 24px auto no-repeat url(/assets/img/icons/souce.webp),
+            var(--buttonMenuBgColor);
+    }
+
+}
