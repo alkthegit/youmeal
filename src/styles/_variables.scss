@@ -1,14 +1,17 @@
-:root {
+$colorDark: #000;
+
+html {
     --font-family: "Nunito", sans-serif;
 
     --colorPrimary: #ffab08;
     --colorSecondary: #ff7020;
+    --colorAccent: #ff5c00;
     --colorLight: #fff;
-    --colorDark: #000;
+    --colorDark: $colorDark;
     --colorBg: #f9f9f9;
     --colorBgAlt: #f2f2f3;
 
     --containerWidthMin: 320px;
-    --containerWidth: 300px;
+    --containerWidth: 1290px;
     --containerPaddingInline: 10px;
 }

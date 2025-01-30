@@ -1,6 +1,8 @@
+@use 'media' as *;
 html {
     box-sizing: border-box;
     overflow-x: hidden;
+    font-size: 10px;    
 }
 
 *::before,
@@ -11,10 +13,10 @@ html {
 body {
     min-width: var(--containerWidthMin);
     min-height: 100svh;
-
-    font-family: var(--font-family);
     color: var(--colorDark);
     background-color: var(--colorBg);
+
+    font-family: var(--font-family);
 }
 
 img,
@@ -22,6 +24,7 @@ svg {
     max-width: 100%;
     max-height: 100%;
     height: auto;
+    line-height: 0;
 }
 
 button {
@@ -35,11 +38,16 @@ button {
 a {
     text-decoration: none;
     color: inherit;
+    line-height: 0;
 }
 
 ul:where([class]) {
     list-style: none;
     padding: 0;
+    margin: 0;
+}
+
+p:where([class]){
     margin: 0;
 }
 
@@ -66,4 +74,21 @@ iframe {
     max-width: calc(var(--containerWidth) + 2 * var(--containerPaddingInline));
     padding-inline: var(--containerPaddingInline);
     margin: 0 auto;
+}
+@include tablet {
+    html {
+        --containerPaddingInline: 64px;
+    }
+}
+
+@include desktop {
+    html {
+        --containerPaddingInline: 32px;
+    }
+}
+
+@include desktop-l {
+    html {
+        --containerPaddingInline: 74px;
+    }
 }

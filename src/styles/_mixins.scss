@@ -1,3 +1,8 @@
+@use 'media' as *;
+
+@mixin text-clamp($min, $max) {
+    font-size: clamp(#{$min}px, #{calc($max / $maxWidth * 100)}vw, #{$max}px);
+}
 @mixin visually-hidden {
     position: fixed;
     scale: 0;
