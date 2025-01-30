@@ -2,6 +2,7 @@
 html {
     box-sizing: border-box;
     overflow-x: hidden;
+    font-size: 10px;    
 }
 
 *::before,
@@ -12,10 +13,10 @@ html {
 body {
     min-width: var(--containerWidthMin);
     min-height: 100svh;
-
-    font-family: var(--font-family);
     color: var(--colorDark);
     background-color: var(--colorBg);
+
+    font-family: var(--font-family);
 }
 
 img,

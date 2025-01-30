@@ -112,7 +112,7 @@
     }
 
     &__title {
-        font-size: 30px;
+        font-size: 3rem;
         line-height: 1.2;
         
         text-align: center;
@@ -120,12 +120,12 @@
         @include tablet {
             padding-top: 8px;
             text-align: left;
-            font-size: 36px;
+            font-size: 3.6rem;
         }
 
         @include desktop {
             padding-top: 20px;
-            font-size: 50px;
+            font-size: 5rem;
         }
         
         em {
@@ -135,10 +135,10 @@
     }
     
     &__appeal {
-        font-size: 12px;
+        font-size: 1.2rem;
 
         @include tablet {
-            font-size: 16px;
+            font-size: 1.6rem;
         }
     }
 
