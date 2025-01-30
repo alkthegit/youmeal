@@ -1,9 +1,14 @@
+@use '../variables' as *; 
 @use '../media' as *; 
+@use '../mixins' as *; 
+@use 'sass:color' as *;
 
 .header {
     --circleRadius: 0.95vw;
     --circleRadiusPerc: calc(var(--circleRadius) * 100);
     --headerHeight: 100svh;
+    --bannerAspect: 1.09;
+    --bannerWidth: 176px;
     position: relative;
     height: var(--headerHeight);
     
@@ -27,19 +32,35 @@
         align-items: center;
         row-gap: 25px;
 
-        padding-block: 24px 30px;
+        padding-block: 20px 0px;
         color: var(--colorLight);
     }
 
     &__title-container {
-    }
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 16px;
+
+        padding-block: 0 248px;
+
+        background: bottom / var(--bannerWidth) auto no-repeat url(/assets/svg/banner.svg);
+}
 
     &__title {
+        @include text-clamp(30, 50);
+        line-height: 1.24;
+
         text-align: center;
         em{
             color: var(--colorAccent);
             font-style: normal;
         }
+    }
+
+    &__appeal{
+        @include text-clamp(12, 16);
     }
 
     &::before{
