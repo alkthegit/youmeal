@@ -74,3 +74,20 @@ iframe {
     padding-inline: var(--containerPaddingInline);
     margin: 0 auto;
 }
+@include tablet {
+    html {
+        --containerPaddingInline: 64px;
+    }
+}
+
+@include desktop {
+    html {
+        --containerPaddingInline: 32px;
+    }
+}
+
+@include desktop-l {
+    html {
+        --containerPaddingInline: 74px;
+    }
+}
