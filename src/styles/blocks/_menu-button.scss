@@ -12,21 +12,17 @@
     font-size: var(--buttonMenuFontSize);
     background-color: var(--buttonMenuBgColor);
     border-radius: 50px;
-    user-select: none;
-    text-wrap: nowrap;
-
-    outline: -1px;
+    white-space: nowrap;
+    border: 1px solid transparent;
 
     @supports not selector(:focus-visible){
         &:focus:not(&--active) {
-            outline: 1px solid var(--colorButtonAccent);
-            outline-offset: -1px;        
+            border-color: var(--colorButtonAccent);
         }
     }
-
+    
     &:where(:hover, :focus-visible):not(&--active) {
-        outline: 1px solid var(--colorButtonAccent);
-        outline-offset: -1px;        
+        border-color: var(--colorButtonAccent);
     }
 
     @include desktop {

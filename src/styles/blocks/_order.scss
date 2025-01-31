@@ -5,6 +5,7 @@
     --orderBorderRadius: 8px;
     position: relative;
     max-width: 100%;
+    min-height: 48px;
 
     @include tablet {
         width: calc(3 * var(--gridColumnWidth));
@@ -32,8 +33,6 @@
         @include desktop {
             align-self: start;
         }
-
-
     }
 
 
@@ -67,8 +66,10 @@
             padding-top: 12px;
         }
 
-        .order__summary-toggler:not(:checked)+& {
-            display: none;
+        @include desktop-below{
+            .order__summary-toggler:not(:checked)+& {
+                display: none;
+            }
         }
     }
 

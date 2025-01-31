@@ -36,6 +36,11 @@ button {
     outline: none;
 }
 
+button,
+[role="button"],
+input[type="button"] {
+    user-select: none;
+}
 a {
     text-decoration: none;
     color: inherit;
