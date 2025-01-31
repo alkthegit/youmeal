@@ -10,13 +10,22 @@
     @include desktop {
         --catalogRowGap: 50px;
     }
-}
 
-.category {
-    &__cards {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 10px;
+    &__items-container{
+        display: flex;
+        flex-direction: column;
+        column-gap: 30px;
+        row-gap: 30px;
+
+        @include desktop {
+            flex-direction: row;
+        }
+    }
+
+    &__order {
+        @include desktop{
+            padding-top: 72px;
+        }
     }
 }
 
@@ -27,7 +36,7 @@
     align-items: center;
     column-gap: var(--menuColumnGap);
 
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
 
     @include tablet {
@@ -37,4 +46,27 @@
     &__button {
         scroll-snap-align: start;
     }
+}
+
+.category {    
+    --categoryCardWidth: 145px;
+
+    width: 100%;
+
+    &__menu {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, var(--categoryCardWidth));
+        gap: 10px;
+
+        @include desktop {
+            --categoryCardWidth: 300px;
+            gap: 30px;
+        }
+    }
+
+    &__title {
+        font-size: 2.8rem;
+        font-weight: 600;
+    }
+    
 }

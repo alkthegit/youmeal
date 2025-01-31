@@ -1,0 +1,103 @@
+@use '../media' as *;
+
+.card {
+    --cardRowGap: 10px;
+    --cardColumnwGap: 6px;
+    --cardPadding: 4px;
+    --cardImageBorderRadius: 8px;
+    --cardImageWidth: 137px;
+    --cardImageAspectRatio: 1.14px;
+    --cardFontSize: 1.2rem;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--cardRowGap);
+    column-gap: var(--cardColumnwGap);
+    max-width: var(--gridColumnWidth);
+    background-color: var(--colorLight);
+    padding: var(--cardPadding);
+    font-size: var(--cardFontSize);
+    height: 100%;
+
+    @include desktop {
+        --cardRowGap: 16px;
+        --cardPadding: 12px;
+        --cardImageBorderRadius: 12px;
+        --cardFontSize: 1.6rem;
+    }
+
+    &__image {
+        border-radius: var(--cardImageBorderRadius);
+        width: var(--cardImageWidth);
+        object-fit: cover;
+        aspect-ratio: var(--cardImageAspectRatio);
+
+        @include desktop {
+            &:not(.card--horizontal &) {
+                --cardImageWidth: 276px;
+            }
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        row-gap: 3px;
+    }
+
+    &__price {
+        color: var(--colorDark);
+        font-size: 1.6rem;
+        font-weight: 600;
+
+        &:where(.card--horizontal &) {
+            margin-top: auto;
+        }
+
+        @include desktop {
+            &:not(.card--horizontal &) {
+                font-size: 2.4rem;
+            }
+        }
+    }
+
+    &__name {
+        color: var(--colorDark);
+
+        &:where(.card--horizontal &) {
+            order: -2;
+        }
+    }
+
+    &__weight {
+        color: var(--textColorSecondary);
+
+        &:where(.card--horizontal &) {
+            order: -1;
+        }
+    }
+
+    &--horizontal {
+        --cardPadding: 12px 0px;
+        --cardFontSize: 1.2rem;
+        --cardImageAspectRatio: 1.23px;
+        --cardImageWidth: 64px;
+
+        font-size: 1ren;
+
+        max-width: 100%;
+        ;
+        flex-direction: row;
+
+        @include desktop {
+            --cardPadding: 16px 0px;
+        }
+    }
+}

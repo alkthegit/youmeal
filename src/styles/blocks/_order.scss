@@ -1,0 +1,91 @@
+@use '../media' as *;
+@use '../elevation' as *;
+
+.order {
+    --orderBorderRadius: 8px;
+    position: relative;
+    max-width: 100%;
+
+    @include tablet {
+        width: calc(3 * var(--gridColumnWidth));
+    }
+
+    @include desktop {
+        --orderBorderRadius: 12px;
+        width: var(--gridColumnWidth);
+    }
+
+    &__inner {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        background-color: var(--colorLight);
+        border-radius: var(--orderBorderRadius);
+
+        padding: 16px 10px;
+
+        @include desktop-below {
+            @include elevate;
+        }
+
+        @include desktop {
+            align-self: start;
+        }
+
+
+    }
+
+
+    &__summary {
+        display: flex;
+        justify-content: space-between;
+
+        &-name {
+            font-size: 1.6rem;
+
+            @include desktop {
+                font-size: 2.4rem;
+            }
+        }
+
+        &-count {
+            font-size: 1rem;
+
+            @include desktop {
+                font-size: 1.6rem;
+            }
+        }
+
+    }
+
+    &__list-container {
+        padding-top: 8px;
+        background-color: var(--colorLight);
+
+        @include desktop {
+            padding-top: 12px;
+        }
+
+        .order__summary-toggler:not(:checked)+& {
+            display: none;
+        }
+    }
+
+    &__list-item {
+        --orderListItemHrBorder: 1px solid var(--colorBgAlt);
+        line-height: 1;
+        height: 75px;
+
+        border-top: var(--orderListItemHrBorder);
+        border-bottom: var(--orderListItemHrBorder);
+
+        @include desktop {
+            height: 84px;
+        }
+    }
+
+    &__card-button {
+        display: none;
+    }
+}

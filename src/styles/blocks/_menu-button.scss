@@ -5,6 +5,7 @@
     --buttonMenuPaddingInline: 40px 8px;
     --buttonMenuFontSize: 1.2rem;
     --buttonMenuBgColor: var(--colorLight);
+    --buttonMenuBgPosition: 8px;
 
     min-height: var(--menuButtonHeight);
     padding-inline: var(--buttonMenuPaddingInline);
@@ -12,22 +13,28 @@
     background-color: var(--buttonMenuBgColor);
     border-radius: 50px;
     user-select: none;
+    text-wrap: nowrap;
 
     outline: -1px;
 
-    &:hover,
-    &:focus-visible {
-        outline: 1px solid var(--colorButtonAccent);
-        outline-offset: -1px;
-        
+    @supports not selector(:focus-visible){
+        &:focus:not(&--active) {
+            outline: 1px solid var(--colorButtonAccent);
+            outline-offset: -1px;        
+        }
     }
 
+    &:where(:hover, :focus-visible):not(&--active) {
+        outline: 1px solid var(--colorButtonAccent);
+        outline-offset: -1px;        
+    }
 
     @include desktop {
         --menuButtonWidth: 126px;
         --menuButtonHeight: 40px;
         --buttonMenuPaddingInline: 46px 14px;
         --buttonMenuFontSize: 1.6rem;
+        --buttonMenuBgPosition: 14px;
     }
 
     &:active,
@@ -35,48 +42,52 @@
         --buttonMenuBgColor: var(--colorPrimary);
     }
 
+    &--active {
+        pointer-events: none;
+    }
+
     &--burger {
-        background: left 8px center / 24px auto no-repeat url(/assets/img/icons/burger.webp),
+        background: left var(--buttonMenuBgPosition) center / 24px auto no-repeat url(/assets/img/icons/burger.webp),
             var(--buttonMenuBgColor);
     }
 
     &--snack {
-        background: left 8px center / 24px auto no-repeat url(/assets/img/icons/snack.webp),
+        background: left var(--buttonMenuBgPosition) center / 24px auto no-repeat url(/assets/img/icons/snack.webp),
             var(--buttonMenuBgColor);
     }
 
     &--hotdog {
-        background: left 8px center / 24px auto no-repeat url(/assets/img/icons/hotdog.webp),
+        background: left var(--buttonMenuBgPosition) center / 24px auto no-repeat url(/assets/img/icons/hotdog.webp),
             var(--buttonMenuBgColor);
     }
 
     &--combo {
-        background: left 8px center / 24px auto no-repeat url(/assets/img/icons/combo.webp),
+        background: left var(--buttonMenuBgPosition) center / 24px auto no-repeat url(/assets/img/icons/combo.webp),
             var(--buttonMenuBgColor);
     }
 
     &--shawerma {
-        background: left 8px center / 24px auto no-repeat url(/assets/img/icons/shawerma.webp),
+        background: left var(--buttonMenuBgPosition) center / 24px auto no-repeat url(/assets/img/icons/shawerma.webp),
             var(--buttonMenuBgColor);
     }
 
     &--pizza {
-        background: left 8px center / 24px auto no-repeat url(/assets/img/icons/pizza.webp),
+        background: left var(--buttonMenuBgPosition) center / 24px auto no-repeat url(/assets/img/icons/pizza.webp),
             var(--buttonMenuBgColor);
     }
 
     &--wok {
-        background: left 8px center / 24px auto no-repeat url(/assets/img/icons/wok.webp),
+        background: left var(--buttonMenuBgPosition) center / 24px auto no-repeat url(/assets/img/icons/wok.webp),
             var(--buttonMenuBgColor);
     }
 
     &--dessert {
-        background: left 8px center / 24px auto no-repeat url(/assets/img/icons/dessert.webp),
+        background: left var(--buttonMenuBgPosition) center / 24px auto no-repeat url(/assets/img/icons/dessert.webp),
             var(--buttonMenuBgColor);
     }
 
     &--souce {
-        background: left 8px center / 24px auto no-repeat url(/assets/img/icons/souce.webp),
+        background: left var(--buttonMenuBgPosition) center / 24px auto no-repeat url(/assets/img/icons/souce.webp),
             var(--buttonMenuBgColor);
     }
 
