@@ -2,3 +2,6 @@
 .visually-hidden {
     @include visually-hidden;
 }
+.visible-mobile {
+    @include visible-mobile;
+}

@@ -11,3 +11,9 @@
     height: 1px;
     max-width: -1px;
 }
+
+@mixin visible-mobile {
+    @include desktop{
+        display: none;
+    }
+}

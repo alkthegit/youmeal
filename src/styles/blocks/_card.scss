@@ -43,6 +43,10 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        &:is(.card--horizontal &){
+            height: 100%;
+        }
     }
 
     &__info {
@@ -54,8 +58,11 @@
 
     &__price {
         color: var(--colorDark);
-        font-size: 1.6rem;
         font-weight: 600;
+        
+        &:not(.card--horizontal &) {
+            font-size: 1.6rem;
+        }
 
         &:where(.card--horizontal &) {
             margin-top: auto;
@@ -80,7 +87,51 @@
         color: var(--textColorSecondary);
 
         &:where(.card--horizontal &) {
+            margin-bottom: 6px;
             order: -1;
+        }
+    }
+
+    &__counter{
+
+        &:where(:not(.card--orderable &)){
+            display: none;
+        }
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;        
+        min-width: 74px;
+        height: 30px;
+        margin-left: auto;
+        background-color: var(--colorBgAlt);
+        border-radius: 8px;
+        font-size: 1.2rem;
+
+        &-button {
+            width: 24px;
+            aspect-ratio: 1;
+            transition: all 0.10s ease-in;
+
+            &:focus-visible:not(:disabled){
+                font-weight: 700;
+                scale: 1.5;
+            }
+
+            &:hover:not(:disabled){
+                scale: 1.5;
+            }
+
+            &:active:not(:disabled){
+                scale: 1.3;
+            }
+        }
+
+        @include desktop{
+            min-width: 84px;
+            height: 40px;
+            font-size: 1.6rem;
+            border-radius: 12px;
         }
     }
 
@@ -89,11 +140,10 @@
         --cardFontSize: 1.2rem;
         --cardImageAspectRatio: 1.23px;
         --cardImageWidth: 64px;
-
-        font-size: 1ren;
+        --cardFontSize: 1.2rem;
+        align-items: center;
 
         max-width: 100%;
-        ;
         flex-direction: row;
 
         @include desktop {
