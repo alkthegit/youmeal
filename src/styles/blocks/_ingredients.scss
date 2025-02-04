@@ -1,16 +1,20 @@
 @use '../media' as *;
 
 .ingredients {
-    font-size: 1rem;
     
     @include desktop {
         font-size: 1.2rem;
     }
-
+    
     &__title {
+        font-size: 1rem;
         margin-bottom: 4px;
         font-style: normal;
         font-weight: 600;
+
+        @include desktop {
+            font-size: 1.2rem;
+        }
     }
 
     &__list {
