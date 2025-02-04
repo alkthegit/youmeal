@@ -47,12 +47,11 @@
 
         @include tablet {
             flex-direction: row;
+            margin-bottom: 52px;
 
             &>* {
                 flex-grow: 1;
             }
-
-            margin-bottom: 52px;
         }
 
         @include desktop {

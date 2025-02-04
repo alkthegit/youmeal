@@ -1,0 +1,49 @@
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0 0 0 / 80%);
+    cursor: pointer;
+    overflow-y: auto;
+
+
+    &__main {
+        position: relative;
+        cursor: default;
+        margin: auto;
+    }
+
+    &__container {
+        position: relative;
+
+    }
+    
+    &__close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+
+        color: var(--textColorSecondary);
+        width: 24px;
+        height: 24px;
+
+        border: 1px solid transparent;
+        border-radius: 3px;
+
+        &:hover,
+        &:focus-visible {
+            color: var(--colorSecondary);
+            border-color: var(--colorSecondary);
+            scale: 1.2
+        }
+
+        &:active {
+            scale: 1.1;
+        }
+    }
+
+
+    &--open {
+        display: flex;
+    }
+}
