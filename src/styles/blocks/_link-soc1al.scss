@@ -1,0 +1,12 @@
+.link-soc1al {
+    &__image {
+        width: 36px;
+        height: 36px;
+    
+        color: var(--colorSecondary);
+        
+        &:hover {
+            color: var(--colorPrimary);
+        }
+    }
+}

@@ -1,0 +1,114 @@
+@use '../variables' as *;
+@use '../media' as *;
+
+.footer {
+    background-color: var(--colorLight);
+    &__container {
+        padding-block: 24px;
+
+        @include tablet {
+            padding-block: 40px 26px;
+        }
+
+        @include desktop {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-block: 52px 40px;
+        }
+    }
+
+    &__logo {
+        color: var(--colorSecondary);
+        width: 200px;
+        height: 45px;
+
+        margin-bottom: 24px;
+
+        @include tablet {
+            margin-bottom: 36px;
+        }
+
+        @include desktop {
+            width: 305px;
+            height: 67px;
+            min-width: 305px;
+            min-height: 67px;
+        }
+
+    }
+
+    &__address {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+
+        margin-bottom: 34px;
+
+        @include tablet {
+            flex-direction: row;
+
+            &>* {
+                flex-grow: 1;
+            }
+
+            margin-bottom: 52px;
+        }
+
+        @include desktop {
+            column-gap: 50px;
+            margin-bottom: 35px;
+        }
+    }
+
+    &__title {
+        font-style: normal;
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin-bottom: 8px;
+
+        @include desktop {
+            margin-bottom: 24px;
+            font-size: 2.4rem;
+        }
+    }
+
+    &__link-phone {
+        display: flex;
+        column-gap: 4px;
+        justify-content: flex-start;
+        align-items: center;
+
+        color: var(--colorDark);
+
+        font-style: normal;
+        font-size: 1.2rem;
+
+        @include desktop {
+            margin-bottom: 24px;
+            font-size: 1.6rem;
+        }
+
+        &:hover {
+            color: var(--colorPrimary);
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+    }
+
+    &__development {
+        font-size: 1.2rem;
+
+        @include desktop {
+            flex-basis: 100%;
+        }
+
+        p {
+            margin-block: 4px;
+        }
+    }
+}
