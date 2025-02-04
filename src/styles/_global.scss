@@ -2,7 +2,11 @@
 html {
     box-sizing: border-box;
     overflow-x: hidden;
-    font-size: 10px;    
+    font-size: 10px;
+
+    // Кроссбраузерность аналогично такому же в body
+    position: relative;
+    overflow-x: none;
 }
 
 *,
@@ -16,8 +20,11 @@ body {
     min-height: 100svh;
     color: var(--colorDark);
     background-color: var(--colorBg);
-
     font-family: var(--font-family);
+
+    // Кроссбраузерность аналогично такому же в html
+    position: relative;
+    overflow-x: none;
 }
 
 img,

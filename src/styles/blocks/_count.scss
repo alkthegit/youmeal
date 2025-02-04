@@ -1,0 +1,40 @@
+@use  '../media' as *;
+.count {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 74px;
+    height: 30px;
+    color: var(--colorDark);
+    background-color: var(--colorBgAlt);
+    
+    border-radius: 8px;
+    padding-inline: 8px;
+    
+    @include desktop {
+        width: 84px;
+        height: 40px;
+        padding-inline: 12px;
+        font-size: 1.6rem;
+    }
+
+    &__button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-grow: 1;
+
+        &--minus {
+            align-items: start;
+        }
+        &--plus {
+            align-items: end;
+        }
+    }
+
+    &__amount {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+}
