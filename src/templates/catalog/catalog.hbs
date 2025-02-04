@@ -1,0 +1,13 @@
+<section class="catalog container"
+    aria-label="каталог продуктов">
+    <h2 class="catalog__header visually-hidden">Каталог продуктов</h2>
+    {{> catalog/catalog-menu}}
+    <div class="catalog__items-container">
+        {{> catalog/catalog-order }}
+        <section class="catalog__category category"
+            aria-label="товары в категории">
+            <h2 class="category__title">Бургеры</h2>
+            {{> catalog/catalog-category-menu }}
+        </section>
+    </div>
+</section>

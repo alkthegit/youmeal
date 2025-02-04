@@ -1,0 +1,100 @@
+<section class="catalog__order order"
+    aria-label="корзина заказа">
+    <div class="order__inner">
+        <h3 class="order__header visually-hidden">Корзина</h3>
+        <label class="order__summary"
+            for="orderSummaryToggler"
+            role="button"
+            aria-label="показать/скрыть детали заказа">
+            <span class="order__summary-name"
+                aria-label="количество позиций в заказе">Корзина</span>
+            <span class="order__summary-count"
+                aria-label="количество позиций в заказе">4</span></label>
+        <input class="order__summary-toggler visually-hidden"
+            type="checkbox"
+            name="orderSummaryToggler"
+            id="orderSummaryToggler">
+        <div class="order__list-container">
+            <ul class="order__list">
+                <li class="order__item">
+                    <img src="/assets/img/burger_1.png"
+                        class="order__item-image"
+                        aria-label="изображение продукта" />
+                    <div class="order__product">
+                        <h3 class="order__product-title">Супер сырный</h3>
+                        <div class="order__product-weight unit-value">
+                            <span class="order__product-amount unit-value__amount">512</span><span
+                                class="order__product-currency unit-value__unit">г</span>
+                        </div>
+                        <div class="order__product-weight unit-value">
+                            <span class="order__product-amount unit-value__amount">550</span><span
+                                class="order__product-currency unit-value__unit">₽</span>
+                        </div>
+                    </div>
+                    <div class="order__count count">
+                        <button class="count__button count__button--minus">-</button>
+                        <label class="count__amount">1</label>
+                        <button class="count__button count__button--plus">+</button>
+                    </div>
+                </li>
+                <li class="order__item">
+                    <img src="/assets/img/free_1.png"
+                        class="order__item-image"
+                        aria-label="изображение продукта" />
+                    <div class="order__product">
+                        <h3 class="order__product-title">Картошка фри</h3>
+                        <div class="order__product-weight unit-value">
+                            <span class="order__product-amount unit-value__amount">180</span><span
+                                class="order__product-currency unit-value__unit">г</span>
+                        </div>
+                        <div class="order__product-weight unit-value">
+                            <span class="order__product-amount unit-value__amount">245</span><span
+                                class="order__product-currency unit-value__unit">₽</span>
+                        </div>
+                    </div>
+                    <div class="order__count count">
+                        <button class="count__button count__button--minus">-</button>
+                        <label class="count__amount">2</label>
+                        <button class="count__button count__button--plus">+</button>
+                    </div>
+                </li>
+                <li class="order__item">
+                    <img src="/assets/img/hotdog_1.png"
+                        class="order__item-image"
+                        aria-label="изображение продукта" />
+                    <div class="order__product">
+                        <h3 class="order__product-title">Жгучий хот-дог</h3>
+                        <div class="order__product-weight unit-value">
+                            <span class="order__product-amount unit-value__amount">245</span><span
+                                class="order__product-currency unit-value__unit">г</span>
+                        </div>
+                        <div class="order__product-weight unit-value">
+                            <span class="order__product-amount unit-value__amount">239</span><span
+                                class="order__product-currency unit-value__unit">₽</span>
+                        </div>
+                    </div>
+                    <div class="order__count count">
+                        <button class="count__button count__button--minus">-</button>
+                        <label class="count__amount">1</label>
+                        <button class="count__button count__button--plus">+</button>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="order__total">
+                <p class="order__total-text">Итого</p>
+                <p class="order__total-number">
+                    <span class="order__total-value">1279</span><span class="order__total-unit">₽</span>
+                </p>
+            </div>
+
+            <button class="order__submit order-button">Оформить заказ</button>
+            <div class="order__footer">
+                <div class="order__footer-appeal">
+                    <p class="order__appeal-text">Бесплатная доставка</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>

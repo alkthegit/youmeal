@@ -7,9 +7,13 @@ html {
     --colorSecondary: #ff7020;
     --colorAccent: #ff5c00;
     --colorLight: #fff;
-    --colorDark: $colorDark;
+    --colorDark: #{$colorDark};
     --colorBg: #f9f9f9;
     --colorBgAlt: #f2f2f3;
+    --colorButtonAccent: #f86310;
+    --colorButtonDisabled: #acacac;
+    --textColorSecondary: #b1b1b1;
+    --gridColumnWidth: 145px;
 
     --containerWidthMin: 320px;
     --containerWidth: 1290px;

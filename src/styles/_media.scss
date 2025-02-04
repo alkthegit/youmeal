@@ -30,6 +30,18 @@ $desktop-l: 1440px;
     }
 }
 
+@mixin desktop-below {
+    @include media-breakpoint-down($desktop){
+        @content;
+    }
+}
+
+@mixin tablet-below {
+    @include media-breakpoint-down($tablet){
+        @content;
+    }
+}
+
 @mixin media-breakpoint-up($bp) {
     @media (min-width: $bp){
         @content;

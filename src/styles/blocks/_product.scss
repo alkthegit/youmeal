@@ -1,0 +1,56 @@
+@use '../media' as *;
+
+.product {
+    padding: 4px;
+    background-color: var(--colorLight);
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    min-height: 243px;
+
+    @include desktop {
+        min-height: 411px;
+    }
+
+    &__image {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 10px;
+
+        @include desktop {
+            min-height: 220px;
+        }
+    }
+
+    &__price {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 4px;
+
+        @include desktop {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__title {
+        flex-grow: 1;
+        margin-bottom: 4px;
+    }
+
+    &__weight {
+        color: var(--textColorSecondary);
+        margin-bottom: 7px;
+
+        @include desktop {
+            margin-bottom: 8px;
+            font-size: 1.6rem
+        }
+    }
+
+    &__weight-amount {}
+
+    &__weight-currency {}
+}

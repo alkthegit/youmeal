@@ -2,12 +2,17 @@
 html {
     box-sizing: border-box;
     overflow-x: hidden;
-    font-size: 10px;    
+    font-size: 10px;
+
+    // Кроссбраузерность аналогично такому же в body
+    position: relative;
+    overflow-x: none;
 }
 
-*::before,
-*::after {
-    box-sizing: inherit;
+*,
+::before,
+::after {
+    box-sizing: border-box;
 }
 
 body {
@@ -15,8 +20,11 @@ body {
     min-height: 100svh;
     color: var(--colorDark);
     background-color: var(--colorBg);
-
     font-family: var(--font-family);
+
+    // Кроссбраузерность аналогично такому же в html
+    position: relative;
+    overflow-x: none;
 }
 
 img,
@@ -35,18 +43,26 @@ button {
     outline: none;
 }
 
+button,
+[role="button"],
+input[type="button"] {
+    user-select: none;
+}
 a {
     text-decoration: none;
     color: inherit;
     line-height: 0;
 }
 
-ul:where([class]) {
+:is(menu,ul):where([class]) {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+li:where([class]) {
+    line-height: 1;
+}
 p:where([class]){
     margin: 0;
 }
@@ -75,6 +91,7 @@ iframe {
     padding-inline: var(--containerPaddingInline);
     margin: 0 auto;
 }
+
 @include tablet {
     html {
         --containerPaddingInline: 64px;
@@ -84,6 +101,7 @@ iframe {
 @include desktop {
     html {
         --containerPaddingInline: 32px;
+        --gridColumnWidth: 300px;
     }
 }
 

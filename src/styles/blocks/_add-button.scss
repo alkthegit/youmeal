@@ -1,0 +1,37 @@
+@use '../media' as *;
+
+.add-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 32px;
+    border-radius: 8px;
+    height: 30px;
+    background-color: var(--colorBgAlt);
+    color: var(--colorDark);
+    font-size: 1.2rem;
+
+
+    @include desktop {
+        font-size: 1.6rem;
+        padding: 11px 32px;
+        border-radius: 12px;
+        height: 40px;
+    }
+
+    &:hover,
+    &:focus-visible {
+        background-color: var(--colorPrimary);
+    }
+
+    &:active {
+        background-color: var(--colorButtonAccent);
+    }
+
+    &:disabled,
+    &[disabled] {
+        color: var(--colorButtonDisabled);
+        background-color: var(--colorBg);
+    }
+}
