@@ -72,6 +72,21 @@
             </clipPath>
         </defs>
     </symbol>
+    <symbol id="icon-close"
+        viewBox="0 0 24 24">
+        <rect x="5.07544"
+            y="5.28249"
+            width="1"
+            height="20"
+            transform="rotate(-45 5.07544 5.28249)"
+            fill="currentColor" />
+        <rect x="5.78247"
+            y="19.4246"
+            width="1"
+            height="20"
+            transform="rotate(-135 5.78247 19.4246)"
+            fill="currentColor" />
+    </symbol>
 
     <symbol id="soc1al-vk"
         viewBox="0 0 36 36">
