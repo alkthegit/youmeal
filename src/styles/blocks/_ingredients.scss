@@ -1,7 +1,14 @@
+@use '../media' as *;
+
 .ingredients {
+    font-size: 1rem;
+    
+    @include desktop {
+        font-size: 1.2rem;
+    }
+
     &__title {
         margin-bottom: 4px;
-        font-size: 1rem;
         font-style: normal;
         font-weight: 600;
     }
@@ -12,8 +19,6 @@
         gap: 2px;
 
         margin-bottom: 4px;
-
-        font-size: 1rem;
     }
 
     &__power {
