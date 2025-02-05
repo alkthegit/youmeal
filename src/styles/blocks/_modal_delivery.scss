@@ -1,0 +1,179 @@
+@use '../media' as *;
+
+.modal-delivery {
+    --modalProductImageWidth: 43%;
+    --fieldsetGap: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    padding: 32px 10px;
+    background-color: var(--colorBg);
+
+    @include mobile480 {
+        max-width: 524px;
+        min-height: auto;
+        border-radius: 18px;
+        padding: 16px 16px 29px;
+    }
+
+    @include tablet {
+        padding: 20px 16px 29px;
+    }
+
+    @include desktop {
+        --modalDeliveryDonutAreaWidth: 366px;
+        max-width: 684px;
+        padding: 44px 24px 24px var(--modalDeliveryDonutAreaWidth);
+
+        background: 71px center / 197px 257px no-repeat url(/assets/svg/donut.svg),
+            linear-gradient(to right, var(--colorPrimary) 0 50%, var(--colorBg) 0 100%);
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        height: 100%;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+
+        @include mobile480 {
+            margin: 0 auto auto 0;
+        }
+
+    }
+
+    &__title {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 18px;
+
+        @include desktop {
+            font-size: 2.4rem;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        flex-grow: 1;
+        margin-bottom: 15px;
+
+        @include desktop {
+            gap: 16px;
+        }
+    }
+
+    &__fieldset {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--fieldsetGap);
+
+        &--hidden {
+            display: none;
+        }
+
+        &--column {
+            flex-direction: column;
+            align-items: start;
+        }
+
+        &--radio {
+            gap: 12px;
+        }
+    }
+
+    &__input {
+        display: inline-block;
+        width: 100%;
+        height: 30px;
+        border-radius: 8px;
+        padding: 12px;
+
+        font-size: 1rem;
+        color: var(--colorDark);
+
+        @include desktop {
+            font-size: 1.2rem;
+            height: 40px
+        }
+
+        &::placeholder {
+            color: var(--textColorSecondary);
+        }
+
+        &--half {
+            width: calc(50% - var(--fieldsetGap) / 2);
+        }
+    }
+
+    &__radio {
+        --radioWidth: 12px;
+        --radioHeight: 12px;
+        --radioCheckedWidth: 6px;
+        --radioCheckedHeight: 6px;
+        width: var(--radioWidth);
+        height: var(--radioHeight);
+
+        position: relative;
+        appearance: none;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            inset: 0;
+
+            width: 12px;
+            height: 12px;
+
+            border: 1px solid var(--colorBgAlt);
+            border-radius: 50%;
+        }
+
+        &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            translate: -50% -50%;
+            width: var(--radioCheckedWidth);
+            height: var(--radioCheckedHeight);
+            opacity: 0;
+
+            background-color: var(--colorDark);
+            border-radius: 50%;
+        }
+
+        &:checked::after {
+            opacity: 1;
+        }
+    }
+
+    &__label {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 8px;
+
+        @include desktop {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__submit-button {
+        padding: 10px 32px;
+        background-color: var(--colorSecondary);
+        color: var(--colorLight);
+        border-radius: 8px;
+
+        @include desktop {
+            font-size: 1.6rem;
+            border-radius: 12px;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+<div class="modal modal--delivery  {{class}}">
+    <div class="modal__main modal-delivery">
+        <div class="modal-delivery__container">
+            <h2 class="modal-delivery__title">Доставка</h2>
+            <form class="modal-delivery__form"
+                id="deliveryform">
+                <fieldset class="modal-delivery__fieldset">
+                    <input class="modal-delivery__input"
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Ваше имя">
+                    <input class="modal-delivery__input"
+                        type="tel"
+                        name="phone"
+                        id="phone"
+                        placeholder="Телефон">
+                </fieldset>
+                <fieldset
+                    class="modal-delivery__fieldset modal-delivery__fieldset--column modal-delivery__fieldset--radio">
+                    <label class="modal-delivery__label">
+                        <input class="modal-delivery__radio"
+                            type="radio"
+                            name="format"
+                            value="pickup">
+                        <span>Самовывоз</span>
+                    </label>
+                    <label class="modal-delivery__label">
+                        <input class="modal-delivery__radio"
+                            type="radio"
+                            name="format"
+                            value="delivery"
+                            id="phone"
+                            checked>
+                        <span>Доставка</span>
+                    </label>
+                </fieldset>
+                <fieldset class="modal-delivery__fieldset">
+                    <input class="modal-delivery__input"
+                        type="text"
+                        name="address"
+                        id="address"
+                        placeholder="Улица">
+                    <input class="modal-delivery__input modal-delivery__input--half"
+                        type="number"
+                        name="floor"
+                        id="floor"
+                        placeholder="Этаж">
+                    <input class="modal-delivery__input modal-delivery__input--half"
+                        type="number"
+                        name="intercom"
+                        id="intercom"
+                        placeholder="Домофон">
+                </fieldset>
+            </form>
+            <button class="modal-delivery__submit-button add-button "
+                type="submit"
+                form="deliveryform">Оформить</button>
+        </div>
+        <button class="modal__close">
+            <svg>
+                <use href="/assets/svg/sprites.svg#icon-close"></use>
+            </svg>
+        </button>
+    </div>
+</div>
