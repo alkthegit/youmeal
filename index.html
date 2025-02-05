@@ -34,8 +34,8 @@
   <meta name="apple-mobile-web-app-title"
       content="YouMeal" />
   <link rel="manifest"
-      href="./assets/site-DNiy7_mn.webmanifest" />  <script type="module" crossorigin src="./assets/index-BHQd_Csf.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BZ3ATuXl.css">
+      href="./assets/site-DNiy7_mn.webmanifest" />  <script type="module" crossorigin src="./assets/index-DGO2qHxA.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-SODzfzgG.css">
 </head>
 
 <body>
@@ -380,7 +380,7 @@
               </div>
           </div>
       </div>
-      </div>  <div class="modal footer--product modal--open">
+      </div>  <div class="modal modal--product ">
       <div class="modal__main modal-product">
           <div class="modal-product__container">
               <h2 class="modal-product__title">Мясная бомба</h2>
@@ -404,7 +404,7 @@
                   </div>
                   <div class="modal-product__footer">
                       <div class="modal-product__add">
-                          <button class="modal-product modal-product__add-button add-button">Добавить</button>
+                          <button class="modal-product__add-button add-button">Добавить</button>
                           <div class="count modal-product__count">
                               <button class="count__button count__button--minus">-</button>
                               <label class="count__amount">1</label>
@@ -417,6 +417,69 @@
                       </div>
                   </div>
               </div>
+          </div>
+          <button class="modal__close">
+              <svg>
+                  <use href="./assets/sprites-Dubhyndj.svg#icon-close"></use>
+              </svg>
+          </button>
+      </div>
+  </div>  <div class="modal modal--delivery  modal--open">
+      <div class="modal__main modal-delivery">
+          <div class="modal-delivery__container">
+              <h2 class="modal-delivery__title">Доставка</h2>
+              <form class="modal-delivery__form"
+                  id="deliveryform">
+                  <fieldset class="modal-delivery__fieldset">
+                      <input class="modal-delivery__input"
+                          type="text"
+                          name="name"
+                          id="name"
+                          placeholder="Ваше имя">
+                      <input class="modal-delivery__input"
+                          type="tel"
+                          name="phone"
+                          id="phone"
+                          placeholder="Телефон">
+                  </fieldset>
+                  <fieldset class="modal-delivery__fieldset">
+                      <label class="modal-delivery__label">
+                          <input class="modal-delivery__radio"
+                              type="radio"
+                              name="format"
+                              value="pickup">
+                          <span>Самовывоз</span>
+                      </label>
+                      <label class="modal-delivery__label">
+                          <input class="modal-delivery__radio"
+                              type="radio"
+                              name="format"
+                              value="delivery"
+                              id="phone">
+                          <span>Доставка</span>
+                      </label>
+                  </fieldset>
+                  <fieldset class="modal-delivery__fieldset">
+                      <input class="modal-delivery__input"
+                          type="text"
+                          name="address"
+                          id="address"
+                          placeholder="Улица">
+                      <input class="modal-delivery__input modal-delivery__input--half"
+                          type="number"
+                          name="floor"
+                          id="floor"
+                          placeholder="Этаж">
+                      <input class="modal-delivery__input modal-delivery__input--half"
+                          type="number"
+                          name="intercom"
+                          id="intercom"
+                          placeholder="Домофон">
+                  </fieldset>
+              </form>
+              <button class="modal-delivery__submit-button add-button "
+                  type="submit"
+                  form="deliveryform">Оформить</button>
           </div>
           <button class="modal__close">
               <svg>
