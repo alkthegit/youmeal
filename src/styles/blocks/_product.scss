@@ -1,6 +1,7 @@
 @use '../media' as *;
 
 .product {
+    position: relative;
     padding: 4px;
     background-color: var(--colorLight);
     display: flex;
@@ -33,6 +34,31 @@
         @include desktop {
             margin-bottom: 8px;
         }
+    }
+
+    &__detail {
+        &:hover,
+        &:focus-visible {
+            color: var(--colorSecondary);
+        }
+
+        &:active {
+            color: var(--colorPrimary);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            pointer-events: none;
+            inset: 0;
+            outline: 1px solid transparent;
+            border-radius: 12px;
+        }
+
+        &:focus-visible::after {
+            outline-color: var(--colorSecondary);
+        }
+
     }
 
     &__title {
